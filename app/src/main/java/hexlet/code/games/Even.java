@@ -1,4 +1,7 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Cli;
+import hexlet.code.Engine;
+
 
 import java.util.Scanner;
 
@@ -17,7 +20,7 @@ public class Even {
             curret++;
             int randomNumber = a + (int) (Math.random() * b); // Генерация 1-го числа
             String yesNo = randomNumber % 2 == 0 ? "yes" : "no";
-            System.out.print("Question: " + randomNumber + "\nYour answer: ");
+            Engine.questionAnswer(randomNumber);
             Scanner scannner = new Scanner(System.in);
             String answer = scannner.nextLine();
             if (answer.equals(yesNo)) {
