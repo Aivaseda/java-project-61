@@ -18,7 +18,7 @@ public class Calc {
 
     public static int getNum() {
         int aa = 1; // Начальное значение диапазона - "от"
-        int b = 25; // Конечное значение диапазона - "до"
+        int b = 35; // Конечное значение диапазона - "до"
         return aa + (int) (Math.random() * b);
     }
 

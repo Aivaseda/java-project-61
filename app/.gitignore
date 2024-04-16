@@ -8,7 +8,7 @@ build/
 !**/.idea/
 app/.idea/
 .idea/
-
+*.cast
 *.iws
 *.iml
 *.ipr
