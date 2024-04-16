@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 public class Calc {
-    public static void startGame(){
+    public static void startGame() {
 
     }
 }

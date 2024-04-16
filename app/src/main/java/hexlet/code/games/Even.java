@@ -1,38 +1,28 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 
-import java.util.Scanner;
-
 public class Even {
     public static void starGame() {
-        Cli.nameUser();
 
-        int curret = 0;
+        String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        String[][] firstData = new String[Engine.maxRaund][2];
 
-        int a = 1; // Начальное значение диапазона - "от"
+        int aa = 1; // Начальное значение диапазона - "от"
         int b = 35; // Конечное значение диапазона - "до"
 
-        for (int i = 0; i < 3; i++) {
-            curret++;
-            int randomNumber = a + (int) (Math.random() * b); // Генерация 1-го числа
+        for (int i = 0; i < Engine.maxRaund; i++) {
+            int randomNumber = aa + (int) (Math.random() * b); // Генерация 1-го числа
             String yesNo = randomNumber % 2 == 0 ? "yes" : "no";
-            Engine.questionAnswer(randomNumber);
-            Scanner scannner = new Scanner(System.in);
-            String answer = scannner.nextLine();
-            if (answer.equals(yesNo)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + yesNo
-                        + "'\n" + "Let's try again, " + Cli.getName() + "!");
-                break;
-            }
+            firstData[i][1] = yesNo;
+            firstData[i][0] = String.valueOf(randomNumber);
+
         }
-        if (curret == 3) {
-            System.out.println("Congratulations, " + Cli.getName());
-        }
+
+        Engine.newGame(task, firstData);
+//        for(String[] a: firstData){
+//            System.out.println(Arrays.toString(a));
+//        }
     }
 }

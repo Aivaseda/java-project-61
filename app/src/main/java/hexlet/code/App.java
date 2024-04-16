@@ -10,6 +10,7 @@ public class App {
                 + "\n0 - Exit\nYour choice: ");
         Scanner scan = new Scanner(System.in);
         int choise = scan.nextInt();
+
         System.out.println();
         switch (choise) {
             case 1: Cli.nameUser();
@@ -23,5 +24,6 @@ public class App {
             default:
                 break;
         }
+        scan.close();
     }
 }
