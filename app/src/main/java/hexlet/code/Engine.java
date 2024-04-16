@@ -29,10 +29,5 @@ public class Engine {
         if (counter == maxRaund) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
-
     }
-
-
-
-
 }
