@@ -2,7 +2,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static int maxRaund = 3;
+    public static final int MAXRAUND = 3;
 
     public static void newGame(String tex, String[][] mas) {
         Cli.nameUser();
@@ -13,7 +13,7 @@ public class Engine {
     public static void gameBegin(String[][] array) {
         Scanner scannner = new Scanner(System.in);
         int counter = 0;
-        for (int i = 0; i < maxRaund; i++) {
+        for (int i = 0; i < MAXRAUND; i++) {
             System.out.println("Question: " + array[i][0]);
             System.out.print("Your answer: ");
             String answer = scannner.nextLine();
@@ -26,7 +26,7 @@ public class Engine {
             }
             counter++;
         }
-        if (counter == maxRaund) {
+        if (counter == MAXRAUND) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }

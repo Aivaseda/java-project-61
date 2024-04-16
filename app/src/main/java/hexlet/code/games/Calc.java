@@ -23,8 +23,8 @@ public class Calc {
     }
 
     public static void comput() {
-        String[][] firstData = new String[Engine.maxRaund][2];
-        for (int i = 0; i < Engine.maxRaund; i++) {
+        String[][] firstData = new String[Engine.MAXRAUND][2];
+        for (int i = 0; i < Engine.MAXRAUND; i++) {
             int firstNum = getNum();
             int secondNum = getNum();
             String z = znakk();

@@ -7,12 +7,12 @@ public class Even {
 
         String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        String[][] firstData = new String[Engine.maxRaund][2];
+        String[][] firstData = new String[Engine.MAXRAUND][2];
 
         int aa = 1; // Начальное значение диапазона - "от"
         int b = 35; // Конечное значение диапазона - "до"
 
-        for (int i = 0; i < Engine.maxRaund; i++) {
+        for (int i = 0; i < Engine.MAXRAUND; i++) {
             int randomNumber = aa + (int) (Math.random() * b); // Генерация 1-го числа
             String yesNo = randomNumber % 2 == 0 ? "yes" : "no";
             firstData[i][1] = yesNo;
@@ -26,3 +26,4 @@ public class Even {
 //        }
     }
 }
+
