@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 
 public class Progression {
-    public static String task = "What number is missing in the progression?";
+
     public static int getNum(int x) {
         int a = 1;
         int b = x;
@@ -12,6 +12,7 @@ public class Progression {
     }
 
     public static void startGame() {
+        String task = "What number is missing in the progression?";
         String[][] firstData = new String[Engine.MAXRAUND][2];
         String[] litllarray = new String[10];
         for (int i = 0; i < Engine.MAXRAUND; i++) {

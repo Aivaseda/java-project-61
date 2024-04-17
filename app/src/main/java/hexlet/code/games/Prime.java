@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    //static String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void starGame() {
         String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] firstData = new String[Engine.MAXRAUND][2];

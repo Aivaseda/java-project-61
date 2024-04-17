@@ -3,7 +3,7 @@ import hexlet.code.Engine;
 
 
 public class GCD {
-    public static String task = "Find the greatest common divisor of given numbers.";
+
 
     public static int nodGcd(int a, int b) {
         int t;
@@ -22,6 +22,7 @@ public class GCD {
     }
 
     public static void startGame() {
+        String task = "Find the greatest common divisor of given numbers.";
         String[][] firstData = new String[Engine.MAXRAUND][2];
         for (int i = 0; i < Engine.MAXRAUND; i++) {
             int first = getNum();
