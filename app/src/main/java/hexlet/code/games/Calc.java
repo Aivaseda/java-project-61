@@ -1,5 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import java.util.Random;
 
 
@@ -25,8 +27,8 @@ public class Calc {
         String task = "What is the result of the expression?";
         String[][] firstData = new String[Engine.MAXRAUND][2];
         for (int i = 0; i < Engine.MAXRAUND; i++) {
-            int firstNum = getNum();
-            int secondNum = getNum();
+            int firstNum = Utils.getRandomNum(35);
+            int secondNum = Utils.getRandomNum(35);
             String z = znakk();
             int summa = 0;
             String bad = firstNum + z + secondNum;
