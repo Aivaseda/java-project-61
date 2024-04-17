@@ -3,11 +3,11 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void starGame() {
         String[][] firstData = new String[Engine.MAXRAUND][2];
         for (int i = 0; i < Engine.MAXRAUND; i++) {
-            Integer num = getNum();
+            Integer num = getNum(100);
             String yesno = isSimple(num) ? "yes" : "no";
             firstData[i][0] = String.valueOf(num);
             firstData[i][1] = yesno;
@@ -15,9 +15,9 @@ public class Prime {
         Engine.newGame(task, firstData);
     }
 
-    public static int getNum() {
+    public static int getNum(Integer b) {
         Integer a = 1;
-        Integer b = 100;
+        //Integer b = 100;
         return a + (int) (Math.random() * b);
     }
 
