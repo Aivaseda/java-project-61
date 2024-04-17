@@ -7,17 +7,16 @@ public class Progression {
 
     public static int getNum(int x) {
         int a = 1;
-        int b = x;
-        return  a + (int) (Math.random() * b);
+        return  a + (int) (Math.random() * x);
     }
 
     public static void startGame() {
         String task = "What number is missing in the progression?";
         String[][] firstData = new String[Engine.MAXRAUND][2];
-        var longProgression = 10;
-        var maxNumber = 40;
-        var stepProgression = 5;
-        var indexArray = 9;
+        int longProgression = 10;
+        int maxNumber = 40;
+        int stepProgression = 5;
+        int indexArray = 9;
         String[] litllarray = new String[longProgression]; //magic number
         for (int i = 0; i < Engine.MAXRAUND; i++) {
             int first = getNum(maxNumber); //magic number
