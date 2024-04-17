@@ -6,9 +6,7 @@ import java.util.Random;
 
 
 public class Calc {
-    public static void startGame() {
-        comput();
-    }
+    private static final int MAX_VALUE_FOR_IS_PRIME_GAME = 35;
 
     public static String znakk() {
         String[] massiv = {" * ", " + ", " - "};
@@ -17,13 +15,12 @@ public class Calc {
         return massiv[index];
     }
 
-    public static void comput() {
+    public static void startGame() {
         String task = "What is the result of the expression?";
         String[][] firstData = new String[Engine.MAXRAUND][2];
-        int maxNumber = 35;
         for (int i = 0; i < Engine.MAXRAUND; i++) {
-            int firstNum = Utils.getRandomNum(maxNumber);
-            int secondNum = Utils.getRandomNum(maxNumber);
+            int firstNum = Utils.getRandomNum(MAX_VALUE_FOR_IS_PRIME_GAME);
+            int secondNum = Utils.getRandomNum(MAX_VALUE_FOR_IS_PRIME_GAME);
             String z = znakk();
             int summa = 0;
             String bad = firstNum + z + secondNum;
