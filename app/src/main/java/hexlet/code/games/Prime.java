@@ -3,12 +3,12 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
+    private static final int MAX_VALUE_FOR_IS_PRIME_GAME = 100;
     public static void starGame() {
         String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] firstData = new String[Engine.MAXRAUND][2];
-        int maxNum = 100;
         for (int i = 0; i < Engine.MAXRAUND; i++) {
-            Integer num = getNum(maxNum);
+            Integer num = getNum(MAX_VALUE_FOR_IS_PRIME_GAME);
             String yesno = isSimple(num) ? "yes" : "no";
             firstData[i][0] = String.valueOf(num);
             firstData[i][1] = yesno;

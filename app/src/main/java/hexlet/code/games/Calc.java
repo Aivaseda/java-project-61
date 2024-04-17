@@ -17,12 +17,6 @@ public class Calc {
         return massiv[index];
     }
 
-    public static int getNum() {
-        int aa = 1; // Начальное значение диапазона - "от"
-        int b = 35; // Конечное значение диапазона - "до"
-        return aa + (int) (Math.random() * b);
-    }
-
     public static void comput() {
         String task = "What is the result of the expression?";
         String[][] firstData = new String[Engine.MAXRAUND][2];
