@@ -26,9 +26,10 @@ public class Calc {
     public static void comput() {
         String task = "What is the result of the expression?";
         String[][] firstData = new String[Engine.MAXRAUND][2];
+        int maxNumber = 35;
         for (int i = 0; i < Engine.MAXRAUND; i++) {
-            int firstNum = Utils.getRandomNum(35);
-            int secondNum = Utils.getRandomNum(35);
+            int firstNum = Utils.getRandomNum(maxNumber);
+            int secondNum = Utils.getRandomNum(maxNumber);
             String z = znakk();
             int summa = 0;
             String bad = firstNum + z + secondNum;
