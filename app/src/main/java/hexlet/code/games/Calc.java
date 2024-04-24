@@ -19,13 +19,12 @@ public class Calc {
             String expression = getExpression();
             int sum = 0;
             String productNumbers = firstNum + expression + secondNum;
-            switch (expression) {
-                case " * " -> sum = firstNum * secondNum;
-                case " + " -> sum = firstNum + secondNum;
-                case " - " -> sum = firstNum - secondNum;
-                default -> {
-                }
-            }
+            sum = switch (expression) {
+                case " * " -> firstNum * secondNum;
+                case " + " -> firstNum + secondNum;
+                case " - " -> firstNum - secondNum;
+                default -> 0;
+            };
             firstData[i][1] = String.valueOf(sum);
             firstData[i][0] = productNumbers;
         }

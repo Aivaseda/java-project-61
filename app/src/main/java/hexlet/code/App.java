@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        try(Scanner scannner = new Scanner(System.in)) {
+        try (Scanner scannner = new Scanner(System.in)) {
             System.out.print("""
                 Please enter the game number and press Enter.
                 1 - Greet
