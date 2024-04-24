@@ -5,8 +5,12 @@ import hexlet.code.Utils;
 
 public class Even {
     private static final int MAX_VALUE_FOR_IS_PRIME_GAME = 35;
-    public static void starGame() {
+
+    public static void startGame() {
         String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        Engine.newGame(task, generateData());
+    }
+    public static String[][] generateData() {
         String[][] firstData = new String[Engine.MAXRAUND][2];
         for (int i = 0; i < Engine.MAXRAUND; i++) {
             int randomNumber = Utils.getRandomNum(MAX_VALUE_FOR_IS_PRIME_GAME); // Генерация 1-го числа
@@ -14,7 +18,7 @@ public class Even {
             firstData[i][1] = yesNo;
             firstData[i][0] = String.valueOf(randomNumber);
         }
-        Engine.newGame(task, firstData);
+        return firstData;
     }
 }
 

@@ -21,15 +21,18 @@ public class App {
                 Your choice:\s""");
             String answer = scannner.nextLine();
             System.out.println();
-            switch (answer) {
-                case "1" -> Cli.nameUser();
-                case "2" -> Even.starGame();
-                case "3" -> Calc.startGame();
-                case "4" -> GCD.startGame();
-                case "5" -> Progression.startGame();
-                case "6" -> Prime.starGame();
-                default -> {
-                }
+            chooseGame(answer);
+        }
+    }
+    private static void chooseGame(String num) {
+        switch (num) {
+            case "1" -> Cli.greetingUser();
+            case "2" -> Even.startGame();
+            case "3" -> Calc.startGame();
+            case "4" -> GCD.startGame();
+            case "5" -> Progression.startGame();
+            case "6" -> Prime.startGame();
+            default -> {
             }
         }
     }

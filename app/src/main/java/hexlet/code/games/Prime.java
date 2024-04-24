@@ -1,27 +1,26 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
     private static final int MAX_VALUE_FOR_IS_PRIME_GAME = 100;
-    public static void starGame() {
+
+    public static void startGame() {
         String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        Engine.newGame(task, generateData());
+    }
+    private static String[][] generateData() {
         String[][] firstData = new String[Engine.MAXRAUND][2];
         for (int i = 0; i < Engine.MAXRAUND; i++) {
-            Integer num = getNum(MAX_VALUE_FOR_IS_PRIME_GAME);
+            int num = Utils.getRandomNum(MAX_VALUE_FOR_IS_PRIME_GAME);
             String yesno = isSimple(num) ? "yes" : "no";
             firstData[i][0] = String.valueOf(num);
             firstData[i][1] = yesno;
         }
-        Engine.newGame(task, firstData);
+        return firstData;
     }
-
-    public static int getNum(Integer b) {
-        Integer a = 1;
-        return a + (int) (Math.random() * b);
-    }
-
-    public static boolean isSimple(Integer number) {
+    private static boolean isSimple(Integer number) {
         if (number < 2) {
             return false;
         }
