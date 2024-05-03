@@ -12,7 +12,7 @@ public class Progression {
 
     public static void startGame() {
         String task = "What number is missing in the progression?";
-        Engine.newGame(task, generateData());
+        Engine.start(task, generateData());
     }
     public static String[][] generateData() {
         String[][] firstData = new String[Engine.MAXRAUND][2];

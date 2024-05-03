@@ -8,7 +8,7 @@ public class Even {
 
     public static void startGame() {
         String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.newGame(task, generateData());
+        Engine.start(task, generateData());
     }
     public static String[][] generateData() {
         String[][] firstData = new String[Engine.MAXRAUND][2];

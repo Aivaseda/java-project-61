@@ -9,7 +9,7 @@ public class Calc {
 
     public static void startGame() {
         String task = "What is the result of the expression?";
-        Engine.newGame(task, generateData());
+        Engine.start(task, generateData());
     }
     private static String[][] generateData() {
         String[][] firstData = new String[Engine.MAXRAUND][2];

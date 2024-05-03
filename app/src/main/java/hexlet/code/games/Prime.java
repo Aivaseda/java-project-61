@@ -8,7 +8,7 @@ public class Prime {
 
     public static void startGame() {
         String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        Engine.newGame(task, generateData());
+        Engine.start(task, generateData());
     }
     private static String[][] generateData() {
         String[][] firstData = new String[Engine.MAXRAUND][2];

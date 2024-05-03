@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        try (Scanner scannner = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("""
                 Please enter the game number and press Enter.
                 1 - Greet
@@ -19,14 +19,14 @@ public class App {
                 6 - Prime
                 0 - Exit
                 Your choice:\s""");
-            String answer = scannner.nextLine();
+            String answer = scanner.nextLine();
             System.out.println();
-            chooseGame(answer);
+            selectGame(answer);
         }
     }
-    private static void chooseGame(String num) {
+    private static void selectGame(String num) {
         switch (num) {
-            case "1" -> Cli.greetingUser();
+            case "1" -> Cli.greetUser();
             case "2" -> Even.startGame();
             case "3" -> Calc.startGame();
             case "4" -> GCD.startGame();

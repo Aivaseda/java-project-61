@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class Engine {
     public static final int MAXRAUND = 3;
 
-    public static void newGame(String tex, String[][] mas) {
-        String getName = Cli.greetingUser();
+    public static void start(String tex, String[][] mas) {
+        String userName = Cli.greetUser();
         System.out.println(tex);
-        gameBegin(mas, getName);
+        executeGame(mas, userName);
     }
-    public static void gameBegin(String[][] array, String userName) {
+    public static void executeGame(String[][] array, String userName) {
         try (Scanner scanner = new Scanner(System.in)) {
             int counter = 0;
             for (int i = 0; i < MAXRAUND; i++) {
